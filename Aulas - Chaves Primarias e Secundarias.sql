@@ -35,7 +35,7 @@ Loja de Sucos do Henrique
 
 	"Coxinha" (7 Letras) -> Cox
 
-git add */
+*/
 
 
 -- Aula 4 - Criando Base de dados (Parte 1)
@@ -46,7 +46,14 @@ CREATE TABLE tb_Produtos (
 	vlProduto DECIMAL(6,2) NOT NULL
 );
 
--- Aula 5 - Criando Base de dados (Parte 2)
+-- INSERT INTO [nome da tabela] ([colunas]) VALUES ()
+
+INSERT INTO tb_Produtos VALUES ('Suco de Laranja', 4.5)
+
+-- INSERT INTO tb_Produtos VALUES (1.5, 'Suco de Manga');
+-- Com os nomes das colunas
+INSERT INTO tb_Produtos (vlProduto, nmProduto) VALUES (1.5, 'Suco de Mnaga');
+
 
 CREATE TABLE tb_Clientes (
 	nmCliente VARCHAR(50) NOT NULL,
