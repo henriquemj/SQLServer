@@ -35,7 +35,7 @@ Loja de Sucos do Henrique
 
 	"Coxinha" (7 Letras) -> Cox
 
-teste */
+*/
 
 
 -- Aula 4 - Criando Base de dados (Parte 1)
