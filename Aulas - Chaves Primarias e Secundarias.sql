@@ -56,6 +56,7 @@ INSERT INTO tb_Produtos (vlProduto, nmProduto) VALUES (1.5, 'Suco de Manga');
 
 
 CREATE TABLE tb_Clientes (
+	cdCliente INT PRIMARY KEY IDENTITY (1,1),
 	nmCliente VARCHAR(50) NOT NULL,
 	dtNascimento DATE,
 	inSexo VARCHAR(1) NOT NULL,
@@ -68,9 +69,15 @@ CREATE TABLE tb_Clientes (
 
 CREATE TABLE tb_Vendas (
 	cdVenda INT PRIMARY KEY IDENTITY (1,1),
-	cdProduto INT NOT NULL,
-	vlProduto DECIMAL(6,2) NOT NULL
+	cdProduto INT NOT NULL FOREIGN KEY REFERENCES tb_Clientes (cdCliente),
+	dtVenda DATETIME NOT NULL
 );
+
+CREATE TABLE tb_ProdutoVenda (
+	cdProdutoVenda INT PRIMARY KEY IDENTITY(1,1),
+	cdVenda INT FOREIGN KEY REFERENCES tb_Produtos (cdProduto) NOT NULL,
+	qtProduto INT NOT NULL
+)
 
 -- FOREIGN KEY
 -- CONSTRAINT
@@ -79,3 +86,7 @@ ALTER TABLE tb_Vendas
 ADD CONSTRAINT FK_Produto_Vendas
 FOREIGN KEY (cdProduto)
 REFERENCES tb_Produtos (cdProduto)
+
+
+-- Remover a Tabela de vendas
+DROP TABLE tb_Clientes
