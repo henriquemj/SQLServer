@@ -52,7 +52,7 @@ INSERT INTO tb_Produtos VALUES ('Suco de Laranja', 4.5)
 
 -- INSERT INTO tb_Produtos VALUES (1.5, 'Suco de Manga');
 -- Com os nomes das colunas
-INSERT INTO tb_Produtos (vlProduto, nmProduto) VALUES (1.5, 'Suco de Mnaga');
+INSERT INTO tb_Produtos (vlProduto, nmProduto) VALUES (1.5, 'Suco de Manga');
 
 
 CREATE TABLE tb_Clientes (
