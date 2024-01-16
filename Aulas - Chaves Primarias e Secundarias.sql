@@ -75,7 +75,8 @@ CREATE TABLE tb_Vendas (
 
 CREATE TABLE tb_ProdutoVenda (
 	cdProdutoVenda INT PRIMARY KEY IDENTITY(1,1),
-	cdVenda INT FOREIGN KEY REFERENCES tb_Produtos (cdProduto) NOT NULL,
+	cdVenda INT FOREIGN KEY REFERENCES tb_vendas (cdProduto) NOT NULL,
+	cdProduto INT FOREIGN KEY REFERENCES tb_Produtos (cdProduto) NOT NULL,
 	qtProduto INT NOT NULL
 )
 
